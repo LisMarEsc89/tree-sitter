@@ -1,4 +1,5 @@
-# Contributing
+
+ # Contributing
 
 ## Code of Conduct
 
@@ -97,7 +98,7 @@ cargo xtask test test_does_something
 You can run the tests under the debugger (either `lldb` or `gdb`) using the `-g` flag:
 
 ```sh
-cargo xtask test -g test_does_something
+cargo task test -g test_does_something
 ```
 
 Part of the Tree-sitter test suite involves parsing the _corpus_ tests for several languages and performing randomized edits
@@ -112,8 +113,8 @@ If you are using `lldb` to debug the C library, tree-sitter provides custom pret
 You can enable these helpers by importing them:
 
 ```sh
-(lldb) command script import /path/to/tree-sitter/lib/lldb_pretty_printers/tree_sitter_types.py
-```
+(lldb) command script import /path/to/tree-sitter/lib.py
+ ```
 
 ## Published Packages
 
@@ -185,11 +186,12 @@ a short delay. Once you've made a change that you're happy with, you can submit 
 
 The playground page is a little more complicated, but if you know some basic JavaScript and CSS you should be able to make
 changes. The playground code can be found in [`docs/src/assets/js/playground.js`][playground], and its corresponding css
-at [`docs/src/assets/css/playground.css`][playground css]. The editor of choice we use for the playground is [CodeMirror][codemirror],
-and the tree-sitter module is fetched from [here][js url]. This, along with the Wasm module and Wasm parsers, live in the
+at [`docs/src/assets/css/playground.css`][playground css]. The editor of choice we use for the playground is [CodeMirror]
+and the tree-sitter module is fetched from [here][js url].
+This, along with the Wasm module and Wasm parsers, live in the
 [.github.io repo][gh.io repo].
 
-[admonish]: https://github.com/tommilligan/mdbook-admonish
+[admonish]: https://github.com/tommilligan/mdbook-admonis
 [admonish reference]: https://tommilligan.github.io/mdbook-admonish/reference.html
 [cli crate]: https://crates.io/crates/tree-sitter-cli
 [cli package]: https://www.npmjs.com/package/tree-sitter-cli
